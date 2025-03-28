@@ -22,7 +22,7 @@ export const registrace =
         },
       };
 
-      const { data } = await axios.post("https://webovkabackend.onrender.com/api/uzivatele/registrace/", {
+      const { data } = await axios.post("https://backend-ct8d.onrender.com/api/uzivatele/registrace/", {
         fname: fname,
         lname: lname,
         email: email,
@@ -58,7 +58,7 @@ export const registrace =
         },
       };
 
-      const { data } = await axios.post("/api/uzivatele/prihlaseni/", {
+      const { data } = await axios.post("https://backend-ct8d.onrender.com/api/uzivatele/prihlaseni/", {
         username: email,
         password: password,
       }, config);

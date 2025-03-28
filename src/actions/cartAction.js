@@ -2,7 +2,7 @@ import axios from 'axios';
 import { CART_ADD_ITEM, CART_REMOVE_ITEM } from '../constants/cartConstants';
 
 export const pridatDoKosiku = (id, pocet) => async (dispatch, getState) => {
-    const { data } = await axios.get(`/api/produkt/${id}`);
+    const { data } = await axios.get(`https://backend-ct8d.onrender.com/api/produkt/${id}`);
 
     dispatch({
         type: CART_ADD_ITEM,

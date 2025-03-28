@@ -3,7 +3,7 @@ import { PRODUCT_DETAILS_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS,
 export const listProducts = ()=>async (dispatch)=>{
     try{
         dispatch({type: PRODUCT_LIST_REQUEST})
-        const { data } = await axios.get(`/api/produkty`);
+        const { data } = await axios.get(`https://backend-ct8d.onrender.com/api/produkty`);
 
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
@@ -23,7 +23,7 @@ export const listProducts = ()=>async (dispatch)=>{
 export const listProductDetails = (id)=>async (dispatch)=>{
     try{
         dispatch({type: PRODUCT_DETAILS_REQUEST})
-        const { data } = await axios.get(`/api/produkt/${id}`);
+        const { data } = await axios.get(`https://backend-ct8d.onrender.com/api/produkt/${id}`);
 
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
