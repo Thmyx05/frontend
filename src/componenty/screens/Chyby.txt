@@ -1,0 +1,24 @@
+    const { id } = useParams();
+    const [product, setProduct] = useState([]);
+  useEffect(() => {
+    async function fetchproduct() {
+      const { data } = await axios.get(`/api/produkty/${id}`);
+      setProduct(data);
+    }
+    fetchproduct(); --- Nahrazeno ->    const { id } = useParams(); 
+    const [product, setProduct] = useState(null);
+  
+    useEffect(() => {
+      async function fetchProduct() {
+        try {
+          const { data } = await axios.get(`/api/produkty/${id}`);
+          setProduct(data);
+        } catch (error) {
+          console.error("Chyba při načítání produktu:", error);
+        }
+      }
+  
+      if (id) {
+        fetchProduct();
+      }
+    }, [id]);
