@@ -42,7 +42,7 @@ function ProductScreen({params}) {
       <Row>
       <Col md={6}>
       <Image 
-  src={`https://backend-ct8d.onrender.com/images/${product.image}`} 
+  src={`https://backend-ct8d.onrender.com${product.image}`} 
   alt={product.produktnazev} 
   fluid 
 />
