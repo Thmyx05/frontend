@@ -7,7 +7,7 @@ function Product({product}) {
   return (
     <Card className='my-3 p-3 rounded'>
         <Link to={`/produkt/${product._id}`}>
-        <Card.Img src={product.image}></Card.Img>
+        <Card.Img src={`https://backend-ct8d.onrender.com/images/${product.image}`}></Card.Img>
         </Link>
         <Card.Body>
         <Link to={`/produkt/${product._id}`}>

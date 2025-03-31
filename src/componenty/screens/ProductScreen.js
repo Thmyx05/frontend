@@ -41,7 +41,11 @@ function ProductScreen({params}) {
      ):(
       <Row>
       <Col md={6}>
-      <Image src={product.image} alt={product.produktnazev} fluid />
+      <Image 
+  src={`https://backend-ct8d.onrender.com/images/${product.image}`} 
+  alt={product.produktnazev} 
+  fluid 
+/>
       </Col>
     
 
